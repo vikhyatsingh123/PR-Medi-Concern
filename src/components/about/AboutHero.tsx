@@ -1,29 +1,32 @@
-import { motion, useScroll, useTransform } from 'framer-motion'
-import { ChevronRight } from 'lucide-react'
-import { useRef } from 'react'
-import { Link } from 'react-router-dom'
-import { IMG } from '../../data/images'
+import { motion, useScroll, useTransform } from "framer-motion";
+import { ChevronRight } from "lucide-react";
+import { useRef } from "react";
+import { Link } from "react-router-dom";
+import { IMG } from "../../data/images";
 
-const ease = [0.22, 1, 0.36, 1] as const
+const ease = [0.22, 1, 0.36, 1] as const;
 
 const facts = [
-  { label: 'Founded', value: '2008' },
-  { label: 'Headquarters', value: 'Panchkula, India' },
-  { label: 'People', value: '350+' },
-  { label: 'Export markets', value: '25+' },
-]
+  { label: "Market Experience", value: "20+" },
+  { label: "Stockists & Distributors", value: "40+" },
+  { label: "Retail Network", value: "2000+" },
+  { label: "Provinces Covered", value: "7" },
+];
 
 const lines = [
-  [{ w: 'Built' }, { w: 'on' }, { w: 'trust.', accent: true }],
-  [{ w: 'Driven' }, { w: 'by' }, { w: 'science.', accent: true }],
-]
+  [{ w: "Built" }, { w: "on" }, { w: "trust.", accent: true }],
+  [{ w: "Driven" }, { w: "by" }, { w: "Market Expertise.", accent: true }],
+];
 
 export default function AboutHero() {
-  const ref = useRef<HTMLElement>(null)
-  const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] })
-  const y = useTransform(scrollYProgress, [0, 1], ['0%', '25%'])
+  const ref = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
 
-  let i = 0
+  let i = 0;
 
   return (
     <section ref={ref} className="hero-glow relative isolate overflow-hidden">
@@ -54,19 +57,28 @@ export default function AboutHero() {
           {lines.map((line, li) => (
             <span key={li} className="block">
               {line.map((word) => {
-                const idx = i++
+                const idx = i++;
                 return (
-                  <span key={word.w} className="inline-block overflow-hidden pb-[0.12em] align-bottom">
+                  <span
+                    key={word.w}
+                    className="inline-block overflow-hidden pb-[0.12em] align-bottom"
+                  >
                     <motion.span
-                      className={`inline-block pr-[0.22em] ${word.accent ? 'text-brand-500' : 'text-white'}`}
-                      initial={{ y: '110%' }}
+                      className={`inline-block pr-[0.22em] ${
+                        word.accent ? "text-brand-500" : "text-white"
+                      }`}
+                      initial={{ y: "110%" }}
                       animate={{ y: 0 }}
-                      transition={{ duration: 0.8, delay: 0.1 + idx * 0.09, ease }}
+                      transition={{
+                        duration: 0.8,
+                        delay: 0.1 + idx * 0.09,
+                        ease,
+                      }}
                     >
                       {word.w}
                     </motion.span>
                   </span>
-                )
+                );
               })}
             </span>
           ))}
@@ -78,8 +90,9 @@ export default function AboutHero() {
           transition={{ duration: 0.7, delay: 0.6, ease }}
           className="mt-7 max-w-xl text-lg leading-relaxed text-white/70"
         >
-          For over 15 years we have made medicines that patients and partners can depend on — guided by one simple
-          belief: healthcare should be dependable.
+          PR Medi Concern Pvt. Ltd. is a Nepal-focused pharmaceutical import and
+          distribution company, connecting pharmaceutical principals with the
+          Nepalese market.
         </motion.p>
 
         <motion.dl
@@ -90,13 +103,17 @@ export default function AboutHero() {
         >
           {facts.map((f) => (
             <div key={f.label} className="bg-ink/60 p-6">
-              <dt className="text-xs font-semibold tracking-widest text-white/50 uppercase">{f.label}</dt>
-              <dd className="mt-1.5 font-display text-xl font-bold text-white">{f.value}</dd>
+              <dt className="text-xs font-semibold tracking-widest text-white/50 uppercase">
+                {f.label}
+              </dt>
+              <dd className="mt-1.5 font-display text-xl font-bold text-white">
+                {f.value}
+              </dd>
             </div>
           ))}
         </motion.dl>
       </div>
       <div className="h-12" />
     </section>
-  )
+  );
 }

@@ -55,7 +55,7 @@ export default function CallbackForm() {
           type="tel"
           required
           className="input"
-          placeholder="+91 00000 00000"
+          placeholder="+977 00000 00000"
           autoComplete="tel"
         />
       </div>

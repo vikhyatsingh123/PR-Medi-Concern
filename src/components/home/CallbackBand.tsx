@@ -1,8 +1,13 @@
-import { CheckCircle2 } from 'lucide-react'
-import CallbackForm from '../CallbackForm'
-import Reveal from '../ui/Reveal'
+import { CheckCircle2 } from "lucide-react";
+import CallbackForm from "../CallbackForm";
+import Reveal from "../ui/Reveal";
 
-const points = ['Dedicated key-account manager', 'Transparent pricing & timelines', 'Free consultation on formulations']
+const points = [
+  "Established pharmaceutical market experience",
+  "Nationwide distribution across all 7 provinces",
+  "Strong network of 40+ stockists and 2,000+ retail connections",
+  "Dedicated business and regulatory support",
+];
 
 export default function CallbackBand() {
   return (
@@ -12,13 +17,21 @@ export default function CallbackBand() {
         <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-white/10 blur-2xl" />
         <div className="relative grid items-center gap-12 lg:grid-cols-2">
           <Reveal>
-            <h2 className="text-3xl font-extrabold !text-white sm:text-4xl">Partner with a manufacturer you can rely on</h2>
+            <h2 className="text-3xl font-extrabold !text-white sm:text-4xl">
+              Partner with a Trusted Pharmaceutical Distribution Partner in
+              Nepal
+            </h2>
             <p className="mt-4 max-w-md text-white/85">
-              Tell us what you need and our team will get back to you with a tailored proposal.
+              Looking to expand your pharmaceutical business in Nepal? Partner
+              with PR Medi Concern Pvt. Ltd. for reliable import coordination,
+              regulatory support and nationwide distribution.
             </p>
             <ul className="mt-8 space-y-3">
               {points.map((p) => (
-                <li key={p} className="flex items-center gap-3 font-medium text-white">
+                <li
+                  key={p}
+                  className="flex items-center gap-3 font-medium text-white"
+                >
                   <CheckCircle2 className="h-5 w-5 text-white/90" /> {p}
                 </li>
               ))}
@@ -26,12 +39,14 @@ export default function CallbackBand() {
           </Reveal>
           <Reveal delay={0.15} x={30} y={0}>
             <div className="rounded-3xl bg-white p-6 shadow-soft sm:p-8">
-              <h3 className="mb-5 text-xl font-bold">Arrange a quick call back</h3>
+              <h3 className="mb-5 text-xl font-bold">
+                Arrange a Business Discussion
+              </h3>
               <CallbackForm />
             </div>
           </Reveal>
         </div>
       </div>
     </section>
-  )
+  );
 }

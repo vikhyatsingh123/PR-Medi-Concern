@@ -1,13 +1,21 @@
-import { IMG } from '../../data/images'
-import Reveal from '../ui/Reveal'
-import SectionHeading from '../ui/SectionHeading'
+import { IMG } from "../../data/images";
+import Reveal from "../ui/Reveal";
+import SectionHeading from "../ui/SectionHeading";
 
 const shots = [
-  { src: IMG.lab, label: 'Quality control laboratory', className: 'md:col-span-2 md:row-span-2' },
-  { src: IMG.tubes, label: 'Sample testing', className: '' },
-  { src: IMG.vials, label: 'Injectables', className: '' },
-  { src: IMG.pharmacy, label: 'Finished goods warehouse', className: 'md:col-span-2' },
-]
+  {
+    src: IMG.lab,
+    label: "Quality control laboratory",
+    className: "md:col-span-2 md:row-span-2",
+  },
+  { src: IMG.tubes, label: "Sample testing", className: "" },
+  { src: IMG.vials, label: "Transport", className: "" },
+  {
+    src: IMG.pharmacy,
+    label: "Finished goods warehouse",
+    className: "md:col-span-2",
+  },
+];
 
 export default function Gallery() {
   return (
@@ -20,7 +28,12 @@ export default function Gallery() {
         />
         <div className="mt-14 grid auto-rows-[220px] gap-5 md:grid-cols-4">
           {shots.map((s, i) => (
-            <Reveal key={s.label} delay={i * 0.08} y={30} className={s.className}>
+            <Reveal
+              key={s.label}
+              delay={i * 0.08}
+              y={30}
+              className={s.className}
+            >
               <figure className="group relative h-full overflow-hidden rounded-[2rem]">
                 <img
                   src={s.src}
@@ -38,5 +51,5 @@ export default function Gallery() {
         </div>
       </div>
     </section>
-  )
+  );
 }

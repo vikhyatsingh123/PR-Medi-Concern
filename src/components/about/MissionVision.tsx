@@ -1,21 +1,26 @@
-import { Eye, Target, type LucideIcon } from 'lucide-react'
-import { IMG } from '../../data/images'
-import Reveal from '../ui/Reveal'
+import { Eye, Target, type LucideIcon } from "lucide-react";
+import { IMG } from "../../data/images";
+import Reveal from "../ui/Reveal";
 
-const cards: { icon: LucideIcon; title: string; text: string; image: string }[] = [
+const cards: {
+  icon: LucideIcon;
+  title: string;
+  text: string;
+  image: string;
+}[] = [
   {
     icon: Target,
-    title: 'Our mission',
-    text: 'To manufacture safe, effective and affordable medicines through world-class quality systems and continuous innovation.',
+    title: "Our mission",
+    text: "To strengthen pharmaceutical access across Nepal by providing reliable import and distribution services, building strong partnerships with pharmaceutical principals and supporting an efficient supply chain that connects quality healthcare products with the people who need them.",
     image: IMG.research,
   },
   {
     icon: Eye,
-    title: 'Our vision',
-    text: 'To be the most trusted healthcare manufacturing partner in India and a respected name across global markets.',
+    title: "Our vision",
+    text: "To become a trusted pharmaceutical import and distribution partner in Nepal, recognized for our nationwide market reach, operational reliability, strong business relationships and commitment to supporting the healthcare sector.",
     image: IMG.vials,
   },
-]
+];
 
 export default function MissionVision() {
   return (
@@ -35,13 +40,17 @@ export default function MissionVision() {
                 <span className="grid h-14 w-14 place-items-center rounded-2xl bg-brand-500 text-white shadow-brand">
                   <c.icon className="h-7 w-7" />
                 </span>
-                <h3 className="mt-6 text-3xl font-extrabold text-white">{c.title}</h3>
-                <p className="mt-3 max-w-md leading-relaxed text-white/75">{c.text}</p>
+                <h3 className="mt-6 text-3xl font-extrabold text-white">
+                  {c.title}
+                </h3>
+                <p className="mt-3 max-w-md leading-relaxed text-white/75">
+                  {c.text}
+                </p>
               </div>
             </div>
           </Reveal>
         ))}
       </div>
     </section>
-  )
+  );
 }

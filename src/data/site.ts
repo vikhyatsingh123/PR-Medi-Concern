@@ -23,19 +23,19 @@ export const navLinks = [
 ];
 
 export const inquiryTypes = [
-  "Domestic formulation supply",
-  "Export formulation supply",
-  "Contract manufacturing (CDMO)",
-  "Third-party / loan licence",
-  "API & intermediates",
-  "General inquiry",
+  "Pharmaceutical Product Distribution",
+  "Import & Regulatory Coordination",
+  "New Business Partnership",
+  "Product Registration Support",
+  "Marketing & Market Access",
+  "Other Business Enquiries",
 ];
 
 export const stats = [
-  { value: 5, suffix: "", label: "Manufacturing facilities" },
-  { value: 2.5, suffix: "B+", label: "Units annual capacity", decimals: 1 },
+  { value: 40, suffix: "+", label: "Stockists & Distributors" },
+  { value: 2000, suffix: "+", label: "Retail networks" },
   { value: 500, suffix: "+", label: "Commercial formulations" },
-  { value: 1200, suffix: "+", label: "Customers served" },
+  { value: 10, suffix: "L+", label: "Customers served" },
 ];
 
 export const certifications = [
@@ -71,28 +71,23 @@ export const testimonials = [
 export const timeline = [
   {
     year: "2008",
-    title: "Humble beginnings",
-    text: "Started as a small formulation unit with a team of 20 people.",
+    title: "Shiva Shai - The Beginning",
+    text: "Our business journey began with Shiva Shai, laying the foundation for our entrepreneurial experience and understanding of the pharmaceutical business.",
   },
   {
     year: "2012",
-    title: "WHO-GMP certification",
-    text: "Our first facility received WHO-GMP certification.",
+    title: "PR Medi Enterprises — Business Expansion",
+    text: "The next phase of our journey strengthened our involvement in pharmaceutical trading and distribution, building valuable business relationships and market experience.",
   },
   {
     year: "2016",
-    title: "Nutraceutical division",
-    text: "Launched a dedicated nutraceutical and Ayurvedic wing.",
+    title: "PR Medi Concern Pvt. Ltd. — A New Chapter",
+    text: "Building on our business experience, PR Medi Concern Pvt. Ltd. developed its focus on pharmaceutical imports and distribution, serving the healthcare market in Nepal.",
   },
   {
     year: "2020",
-    title: "Export expansion",
-    text: "Began supplying to over 15 countries across Asia and Africa.",
-  },
-  {
-    year: "2024",
-    title: "R&D centre",
-    text: "Opened an in-house R&D and analytical development centre.",
+    title: "Expanding Our Nationwide Reach",
+    text: "Today, our distribution network connects 40+ stockists and distributors with more than 2,000 retail outlets across all seven provinces of Nepal, supported by warehousing and cold-chain handling capabilities.",
   },
 ];
 

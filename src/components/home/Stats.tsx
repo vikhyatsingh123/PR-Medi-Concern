@@ -1,20 +1,26 @@
-import { motion, useScroll, useTransform } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
-import { useRef } from 'react'
-import { IMG } from '../../data/images'
-import { stats } from '../../data/site'
-import Button from '../ui/Button'
-import Counter from '../ui/Counter'
-import Reveal from '../ui/Reveal'
-import SectionHeading from '../ui/SectionHeading'
+import { motion, useScroll, useTransform } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import { useRef } from "react";
+import { IMG } from "../../data/images";
+import { stats } from "../../data/site";
+import Button from "../ui/Button";
+import Counter from "../ui/Counter";
+import Reveal from "../ui/Reveal";
+import SectionHeading from "../ui/SectionHeading";
 
 export default function Stats() {
-  const ref = useRef<HTMLElement>(null)
-  const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end start'] })
-  const y = useTransform(scrollYProgress, [0, 1], ['-12%', '12%'])
+  const ref = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+  const y = useTransform(scrollYProgress, [0, 1], ["-12%", "12%"]);
 
   return (
-    <section ref={ref} className="section-y relative isolate overflow-hidden bg-ink">
+    <section
+      ref={ref}
+      className="section-y relative isolate overflow-hidden bg-ink"
+    >
       <motion.img
         src={IMG.lab}
         alt=""
@@ -46,16 +52,20 @@ export default function Stats() {
             <Reveal
               key={s.label}
               delay={i * 0.1}
-              className={`border-white/15 p-6 sm:p-10 ${i % 2 === 0 ? 'border-r' : ''} ${i < 2 ? 'border-b' : ''}`}
+              className={`border-white/15 p-6 sm:p-10 ${
+                i % 2 === 0 ? "border-r" : ""
+              } ${i < 2 ? "border-b" : ""}`}
             >
               <p className="bg-linear-to-b from-white to-brand-400 bg-clip-text font-display text-5xl font-extrabold tracking-tight text-transparent sm:text-6xl xl:text-7xl">
-                <Counter to={s.value} suffix={s.suffix} decimals={s.decimals} />
+                <Counter to={s.value} suffix={s.suffix} />
               </p>
-              <p className="mt-3 text-sm font-medium text-white/65">{s.label}</p>
+              <p className="mt-3 text-sm font-medium text-white/65">
+                {s.label}
+              </p>
             </Reveal>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }

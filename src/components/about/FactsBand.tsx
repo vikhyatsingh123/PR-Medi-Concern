@@ -1,6 +1,6 @@
-import { stats } from '../../data/site'
-import Counter from '../ui/Counter'
-import Reveal from '../ui/Reveal'
+import { stats } from "../../data/site";
+import Counter from "../ui/Counter";
+import Reveal from "../ui/Reveal";
 
 export default function FactsBand() {
   return (
@@ -10,12 +10,12 @@ export default function FactsBand() {
         {stats.map((s, i) => (
           <Reveal key={s.label} delay={i * 0.08}>
             <p className="font-display text-4xl font-extrabold text-white sm:text-6xl">
-              <Counter to={s.value} suffix={s.suffix} decimals={s.decimals} />
+              <Counter to={s.value} suffix={s.suffix} />
             </p>
             <p className="mt-2 text-sm font-medium text-white/85">{s.label}</p>
           </Reveal>
         ))}
       </div>
     </section>
-  )
+  );
 }

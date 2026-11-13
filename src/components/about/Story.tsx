@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { BadgeCheck } from "lucide-react";
 import { IMG } from "../../data/images";
-import { team } from "../../data/site";
 import Reveal from "../ui/Reveal";
 import SectionHeading from "../ui/SectionHeading";
 
@@ -13,7 +12,6 @@ const points = [
 ];
 
 export default function Story() {
-  const founder = team[0];
   return (
     <section className="section-y overflow-hidden">
       <div className="container-x grid items-center gap-16 lg:grid-cols-2 lg:gap-24">

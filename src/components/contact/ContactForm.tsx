@@ -6,7 +6,7 @@ import FormSuccess from "../ui/FormSuccess";
 
 export default function ContactForm({ product }: { product: string | null }) {
   const [sent, setSent] = useState(false);
-  const [type, setType] = useState(inquiryTypes[0]);
+  const [,] = useState(inquiryTypes[0]);
 
   const onSubmit = (e: FormEvent) => {
     e.preventDefault();

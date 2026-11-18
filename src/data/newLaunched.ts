@@ -17,7 +17,7 @@ import grovitatablet1 from "../assets/grovitatablet/1.png";
 import ftmen1 from "../assets/ftmen/1.png";
 import eone1 from "../assets/eone/1.png";
 import cttab1 from "../assets/cttab/1.png";
-import bebact451 from "../assets/bebact45/1.png";
+import bebact451 from "../assets/bebact45/2.png";
 import arescal1 from "../assets/arescal/1.png";
 import amyotol1 from "../assets/amyotol/1.png";
 import addu1 from "../assets/addu/1.png";
@@ -25,7 +25,7 @@ import addu1 from "../assets/addu/1.png";
 export const newLaunched = [
   {
     id: "vitex",
-    name: "Vitex Agnus-castus Extract with Inositol",
+    name: "Vitex Agnus-castus Extract",
     description:
       "Vitex Agnus-castus Extract with Inositol is a dietary supplement designed to support women's health. It combines the benefits of Vitex Agnus-castus, known for its hormonal balance properties, with Inositol, which plays a crucial role in cellular health.",
     image: vitex1,

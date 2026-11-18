@@ -116,6 +116,7 @@ import { bebact45 } from "../../data/ProductData/bebact45";
 import { amyotol } from "../../data/ProductData/amyotol";
 import { addu } from "../../data/ProductData/addu";
 import { aerscal } from "../../data/ProductData/aerscal";
+import { namimtab } from "../../data/ProductData/namimtab";
 
 export interface Product {
   id: string;
@@ -140,12 +141,14 @@ const productData: Record<string, any> = {
   navprime: navprime,
   nanob6: nanob6,
   namitab: namitab,
+  namimtab: namimtab,
   namidh: namidh,
   namibone: namibone,
   madmax: madmax,
   livsuretablets: livsure,
   honda: honda,
   grovitatablet: grovita,
+  priorim: priorim,
   ftmen: ftmen,
   eone: eone,
   cttab: cttab,
@@ -370,9 +373,9 @@ const ProductModal: React.FC<ProductModalProps> = ({
                   absolute
                   inset-0
                   bg-gradient-to-br
-                  from-[#e3eeee]
-                  via-[#d7e6e8]
-                  to-[#a0c3ce]
+                  from-[#fff]
+                  via-[#ffdac8]
+                  to-[#e4e2df]
                 "
               />
 

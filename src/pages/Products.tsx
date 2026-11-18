@@ -52,7 +52,7 @@ export default function Products() {
         image={IMG.pills}
       ></PageHero>
 
-      <div className="products-grid">
+      <div className="products-grid mt-12">
         {newLaunched.map((cat, i) => (
           <FadeUp key={cat.name} delay={i * 0.08}>
             <div className="bg-white border border-[#e1edf7] p-4 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group h-full">

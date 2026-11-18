@@ -1,33 +1,32 @@
-import { ArrowRight, Clock, Mail, MapPin, Phone } from 'lucide-react'
-import { useState, type FormEvent } from 'react'
-import { Link } from 'react-router-dom'
-import { navLinks, site } from '../../data/site'
-import { productCategories } from '../../data/products'
-import Logo from '../ui/Logo'
+import { ArrowRight, Clock, Mail, MapPin, Phone } from "lucide-react";
+import { useState, type FormEvent } from "react";
+import { Link } from "react-router-dom";
+import { navLinks, site } from "../../data/site";
+import Logo from "../ui/Logo";
 
 const socials = [
-  { label: 'LinkedIn', short: 'in' },
-  { label: 'Facebook', short: 'f' },
-  { label: 'Instagram', short: 'ig' },
-  { label: 'YouTube', short: 'yt' },
-]
+  { label: "LinkedIn", short: "in" },
+  { label: "Facebook", short: "f" },
+  { label: "Instagram", short: "ig" },
+  { label: "YouTube", short: "yt" },
+];
 
 export default function Footer() {
-  const [subscribed, setSubscribed] = useState(false)
+  const [subscribed, setSubscribed] = useState(false);
 
   const onSubscribe = (e: FormEvent) => {
-    e.preventDefault()
-    setSubscribed(true)
-  }
+    e.preventDefault();
+    setSubscribed(true);
+  };
 
   return (
     <footer className="bg-ink text-white/70">
       <div className="container-x grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-12">
-        <div className="lg:col-span-4">
+        <div className="lg:col-span-5">
           <Logo light />
           <p className="mt-5 max-w-sm text-sm leading-relaxed">
-            {site.tagline} We manufacture safe, effective and affordable medicines for patients and partners across India
-            and the world.
+            {site.tagline} We manufacture safe, effective and affordable
+            medicines for patients and partners across India and the world.
           </p>
           <div className="mt-6 flex gap-2.5">
             {socials.map((s) => (
@@ -43,12 +42,17 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="lg:col-span-2">
-          <h3 className="text-sm font-bold tracking-widest text-white uppercase">Quick Links</h3>
+        <div className="lg:col-span-4">
+          <h3 className="text-sm font-bold tracking-widest text-white uppercase">
+            Quick Links
+          </h3>
           <ul className="mt-5 space-y-3 text-sm">
             {navLinks.map((l) => (
               <li key={l.to}>
-                <Link to={l.to} className="transition hover:pl-1 hover:text-brand-400">
+                <Link
+                  to={l.to}
+                  className="transition hover:pl-1 hover:text-brand-400"
+                >
                   {l.label}
                 </Link>
               </li>
@@ -57,23 +61,13 @@ export default function Footer() {
         </div>
 
         <div className="lg:col-span-3">
-          <h3 className="text-sm font-bold tracking-widest text-white uppercase">Our Offerings</h3>
-          <ul className="mt-5 space-y-3 text-sm">
-            {productCategories.map((c) => (
-              <li key={c}>
-                <Link to={`/products?category=${encodeURIComponent(c)}`} className="transition hover:pl-1 hover:text-brand-400">
-                  {c}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="lg:col-span-3">
-          <h3 className="text-sm font-bold tracking-widest text-white uppercase">Get in touch</h3>
+          <h3 className="text-sm font-bold tracking-widest text-white uppercase">
+            Get in touch
+          </h3>
           <ul className="mt-5 space-y-3.5 text-sm">
             <li className="flex gap-3">
-              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand-500" /> {site.address}
+              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand-500" />{" "}
+              {site.address}
             </li>
             <li className="flex gap-3">
               <Phone className="mt-0.5 h-4 w-4 shrink-0 text-brand-500" />
@@ -88,7 +82,8 @@ export default function Footer() {
               </a>
             </li>
             <li className="flex gap-3">
-              <Clock className="mt-0.5 h-4 w-4 shrink-0 text-brand-500" /> {site.hours}
+              <Clock className="mt-0.5 h-4 w-4 shrink-0 text-brand-500" />{" "}
+              {site.hours}
             </li>
           </ul>
         </div>
@@ -98,8 +93,12 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="container-x flex flex-col items-start justify-between gap-5 py-8 md:flex-row md:items-center">
           <div>
-            <p className="font-display font-bold text-white">Subscribe to our newsletter</p>
-            <p className="text-sm">Product launches, industry news and company updates.</p>
+            <p className="font-display font-bold text-white">
+              Subscribe to our newsletter
+            </p>
+            <p className="text-sm">
+              Product launches, industry news and company updates.
+            </p>
           </div>
           {subscribed ? (
             <p className="rounded-full bg-brand-500/15 px-5 py-3 text-sm font-semibold text-brand-300">
@@ -142,5 +141,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

@@ -53,8 +53,8 @@ export default function Products() {
       ></PageHero>
 
       <div className="products-grid mt-12">
-        {newLaunched.map((cat, i) => (
-          <FadeUp key={cat.name} delay={i * 0.08}>
+        {newLaunched.map((cat) => (
+          <FadeUp key={cat.name}>
             <div className="bg-white border border-[#e1edf7] p-4 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group h-full">
               <div className="flex items-center justify-center mb-5 transition-transform group-hover:scale-110">
                 <img
@@ -72,22 +72,17 @@ export default function Products() {
                 {cat.description}
               </p>
 
-              <button
-                onClick={() => {
-                  setSelectedProduct(cat);
-                  setOpen(true);
-                }}
-                className="cursor-pointer w-full flex justify-center items-center gap-1 text-sm group-hover:gap-2 transition-all"
-              >
-                <div
-                  style={{
-                    background: "linear-gradient(135deg, #1a3a6b, #2a5298)",
+              <div className="w-full flex justify-center items-center">
+                <Button
+                  onClick={() => {
+                    setSelectedProduct(cat);
+                    setOpen(true);
                   }}
-                  className="px-4 py-2 rounded-full text-white font-semibold transition-all hover:shadow-lg hover:-translate-y-0.5"
+                  className="cursor-pointer w-1/2 flex justify-center items-center gap-1 text-sm group-hover:gap-2 transition-all"
                 >
                   View Details
-                </div>
-              </button>
+                </Button>
+              </div>
             </div>
           </FadeUp>
         ))}

@@ -4,9 +4,7 @@ import CallbackBand from "../components/home/CallbackBand";
 import Capabilities from "../components/home/Capabilities";
 import FeaturedProducts from "../components/home/FeaturedProducts";
 import Hero from "../components/home/Hero";
-import Process from "../components/home/Process";
 import Stats from "../components/home/Stats";
-import Testimonials from "../components/home/Testimonials";
 import Page from "../components/ui/Page";
 
 export default function Home() {
@@ -18,8 +16,6 @@ export default function Home() {
       <Stats />
       <Capabilities />
       <FeaturedProducts />
-      <Process />
-      <Testimonials />
       <CallbackBand />
     </Page>
   );

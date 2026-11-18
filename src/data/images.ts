@@ -17,4 +17,8 @@ export const IMG = {
   team2: "/images/team-2.jpg",
   team3: "/images/team-3.jpg",
   team4: "/images/team-4.jpg",
+  cap1: "/images/cap1.png",
+  cap2: "/images/cap2.png",
+  cap3: "/images/cap3.png",
+  cap4: "/images/cap4.png",
 };

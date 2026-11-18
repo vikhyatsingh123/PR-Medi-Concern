@@ -36,6 +36,10 @@ import namitab1 from "../../assets/namitab/1.png";
 import namitab2 from "../../assets/namitab/2.png";
 import namitab3 from "../../assets/namitab/3.png";
 
+import namimtab1 from "../../assets/namimtab/1.png";
+import namimtab2 from "../../assets/namimtab/2.png";
+import namimtab3 from "../../assets/namimtab/3.png";
+
 import namidh1 from "../../assets/namidh/1.png";
 import namidh2 from "../../assets/namidh/2.png";
 import namidh3 from "../../assets/namidh/3.png";
@@ -168,6 +172,7 @@ const productImages: Record<string, string[]> = {
   navprime: [navprime1, navprime2, navprime3],
   nanob6: [nanob61, nanob62, nanob63],
   namitab: [namitab1, namitab2, namitab3],
+  namimtab: [namimtab1, namimtab2, namimtab3],
   namidh: [namidh1, namidh2, namidh3],
   namibone: [namibone1, namibone2, namibone3],
   madmax: [madmax1, madmax2, madmax3],
